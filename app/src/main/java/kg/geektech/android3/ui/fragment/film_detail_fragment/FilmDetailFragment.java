@@ -10,6 +10,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.bumptech.glide.Glide;
+
 import kg.geektech.android3.App;
 import kg.geektech.android3.data.models.Film;
 import kg.geektech.android3.databinding.FragmentFilmDetailBinding;
@@ -60,6 +63,7 @@ public class FilmDetailFragment extends Fragment {
     @SuppressLint("SetTextI18n")
     private void setData(Response<Film> response) {
         assert response.body() != null;
+        Glide.with(binding.imageEv.getContext()).load(response.body().getImage()).into(binding.imageEv);
         binding.title.setText(response.body().getTitle());
         binding.description.setText(response.body().getDescription());
         binding.director.setText("Director:  " +response.body().getDirector());

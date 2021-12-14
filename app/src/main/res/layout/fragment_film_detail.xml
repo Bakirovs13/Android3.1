@@ -1,70 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".ui.fragment.film_detail_fragment.FilmDetailFragment">
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
-   <androidx.cardview.widget.CardView
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+   <ImageView
+       android:scaleType="centerCrop"
+       android:id="@+id/image_ev"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:elevation="50dp"
-       android:layout_margin="10dp"
-       >
-
-      <LinearLayout
-          android:orientation="vertical"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
+       android:layout_height="200dp"/>
 
 
-
-         <TextView
-             android:textStyle="bold"
-             android:layout_margin="10dp"
-             android:textColor="@color/black"
-             android:textSize="24sp"
-             tools:text = "Title"
-             android:id="@+id/title"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"/>
-
-         <TextView
-             android:textStyle="italic"
-             android:maxLines="3"
-             android:ellipsize="end"
-             android:layout_margin="10dp"
-             android:textColor="@color/black"
-             android:textSize="18sp"
-             tools:text = "orig title"
-             android:id="@+id/origTitle"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"/>
-
-         <TextView
-             android:layout_margin="10dp"
-             android:textColor="@color/black"
-             android:textSize="14sp"
-             tools:text = "Description"
-             android:id="@+id/description"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"/>
+   <TextView
+       android:id="@+id/title"
+       android:layout_marginStart="24dp"
+       android:textColor="@color/black"
+       android:layout_marginTop="30dp"
+       android:textSize="25sp"
+       android:textStyle="bold"
+       android:text="Castle in the Sky"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
 
 
-         <TextView
-             android:maxLines="3"
-             android:ellipsize="end"
-             android:layout_margin="10dp"
-             android:textColor="@color/black"
-             android:textSize="14sp"
-             tools:text = "Director"
-             android:id="@+id/director"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"/>
+   <TextView
+       android:textStyle="italic"
+       android:id="@+id/origTitle"
+       android:layout_marginStart="24dp"
+       android:textColor="@color/black"
+       android:layout_marginTop="30dp"
+       android:textSize="16sp"
+       android:text="orog Name"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+
+   <TextView
+       android:textStyle="bold"
+       android:id="@+id/desc_text"
+       android:layout_marginStart="24dp"
+       android:textColor="@color/black"
+       android:layout_marginTop="30dp"
+       android:textSize="16sp"
+       android:text="Plot Summary"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
 
 
-      </LinearLayout>
+   <TextView
+       android:layout_marginEnd="10dp"
+       android:id="@+id/description"
+       android:layout_marginStart="24dp"
+       android:textColor="@color/black"
+       android:layout_marginTop="30dp"
+       android:textSize="16sp"
+       android:text="description"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
 
-   </androidx.cardview.widget.CardView>
 
-</FrameLayout>
+   <TextView
+       android:id="@+id/director"
+       android:layout_marginStart="24dp"
+       android:textColor="@color/black"
+       android:layout_marginTop="30dp"
+       android:textSize="14sp"
+       android:text="Plot Summary"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>
